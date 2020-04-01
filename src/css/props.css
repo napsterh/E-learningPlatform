@@ -13,16 +13,28 @@ h1, h2, h3, h4, h5, h6{
     margin: 0px;
     padding: 0px;;
 }
+button{
+    outline: none;
+    cursor: pointer;
+}
 .flex{
     display: flex;
 }
 .aic{
     align-items: center;
 }
+.jic{
+    justify-content: center;
+}
 .fixed{
     position: fixed;
 }
-
+.abs{
+    position: absolute;
+}
+.rel{
+    position: relative;
+}
 .noul{
     text-decoration: none;
 }
@@ -46,11 +58,15 @@ h1, h2, h3, h4, h5, h6{
 .s15{
     font-size: 15px;
 }
+.s20{
+    font-size: 20px;
+}
 .s24{
     font-size: 24px;
 }
-.s20{
-    font-size: 20px;
+
+.fontn{
+    font-weight: normal;
 }
 
 .fontb {

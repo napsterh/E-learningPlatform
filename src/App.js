@@ -8,13 +8,16 @@ import './css/App.css';
 //screen
 import Header  from "./screens/header";
 import Siderbar  from "./screens/siderbar";
+import HomePage  from "./screens/home";
 
 
 function App() {
   return (
     <div className="App flex">
       <Siderbar/>
-
+      <div className="app-content">
+      <HomePage/>
+      </div>
     </div>
   );
 }
