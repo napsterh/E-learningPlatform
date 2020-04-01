@@ -1,13 +1,47 @@
 .siderbar{
-    width: 250px;
+    width: 275px;
     top: 0px;
     left: 0px;
     bottom: 0px;
 }
-
 .siderbar .logo{
     padding: 20px 25px;
 }
 .siderbar .logo img{
     height: 30px;
 }
+.siderbar .nav{
+    padding: 50px 35px;
+}
+.siderbar .nav li{}
+.siderbar .nav li a{
+    padding: 10px 20px;
+    margin-bottom: 6px;
+}
+.siderbar .nav li a .ico{
+    margin-right: 10px;
+}
+.siderbar .nav li a .lbl{}
+
+.siderbar .nav li a.on{
+    border-left: 3px #674EA7 solid;
+    color: #674EA7;
+    line-height: 1;
+}
+
+.siderbar .updated-course{
+    padding: 0px 35px;
+    margin: 20px 0px;
+}
+.siderbar .updated-course .ico{
+    background: #674EA7;
+    padding: 15px;
+    border-radius: 22px;
+    margin-right: 10px;
+}
+.siderbar .updated-course .lbl{}
+.siderbar .updated-course .lbl .author{}
+
+
+
+

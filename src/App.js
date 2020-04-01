@@ -1,5 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
+//import '../node_modules/font-awesome/css/font-awesome.min.css';
+import './css/uifont.css';
 import './css/props.css';
 import './css/App.css';
 
@@ -12,7 +14,7 @@ function App() {
   return (
     <div className="App flex">
       <Siderbar/>
-      <Header/>
+
     </div>
   );
 }
