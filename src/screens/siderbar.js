@@ -4,10 +4,10 @@ import logo from '../ui/logo.png';
 function Siderbar(){
 
     const [nav, setNav] = useState([
-        {label: "Inicio", slug: "/", icon: "icon-home"},
-        {label: "Descubrir", slug: "descubrir", icon: "icon-ul"},
-        {label: "Categoría", slug: "categoria", icon: "icon-tag"},
-        {label: "Mis cursos", slug: "mis-cursos", icon: "icon-briefcase"}
+        {label: "Inicio", slug: "/", icon: "fas fa-hospital"},
+        {label: "Descubrir", slug: "descubrir", icon: "fas fa-stethoscope"},
+        {label: "Categorías", slug: "categoria", icon: "fas fa-pills"},
+        {label: "Mis cursos", slug: "mis-cursos", icon: "fas fa-book"}
     ])
     const [currentPage, setCurrentPage] = useState("/");
 
