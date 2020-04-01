@@ -1,0 +1,13 @@
+.siderbar{
+    width: 250px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.siderbar .logo{
+    padding: 20px 25px;
+}
+.siderbar .logo img{
+    height: 30px;
+}
