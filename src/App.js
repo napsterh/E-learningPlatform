@@ -9,6 +9,7 @@ import './css/App.css';
 import Header  from "./screens/header";
 import Siderbar  from "./screens/siderbar";
 import HomePage  from "./screens/home";
+import Rightbar  from "./screens/rightbar";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <div className="app-content">
       <HomePage/>
       </div>
+      <Rightbar/>
     </div>
   );
 }

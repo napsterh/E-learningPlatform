@@ -51,6 +51,24 @@ function HomePage(){
             username: "vzamora",
             dp: "http://placeimg.com/111/102/people?tutors" + 3,
         },
+        {
+            ID: 4,
+            name: "Victor Zamora",
+            username: "vzamora",
+            dp: "http://placeimg.com/111/102/people?tutors" + 4,
+        },
+        {
+            ID: 5,
+            name: "Victor Zamora",
+            username: "vzamora",
+            dp: "http://placeimg.com/111/102/people?tutors" + 5,
+        },
+        {
+            ID: 6,
+            name: "Victor Zamora",
+            username: "vzamora",
+            dp: "http://placeimg.com/111/102/people?tutors" + 6,
+        },
     ])
 
     //LISTA PROFESORES EN VIVO
@@ -136,7 +154,7 @@ function HomePage(){
             <div className="section section-b rel">
                 <h2 className="title s24 fontb">Top <span className="fontn">
                  profesores</span></h2>
-                <div className="courses rel flex">
+                <div className="top-tutors rel flex">
                     {topTutorsList}
                 </div>
             </div>

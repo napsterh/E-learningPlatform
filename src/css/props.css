@@ -17,6 +17,9 @@ button{
     outline: none;
     cursor: pointer;
 }
+select, textarea, input{
+    outline: none;
+}
 .flex{
     display: flex;
 }
