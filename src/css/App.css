@@ -7,7 +7,7 @@
     padding: 20px 25px;
 }
 .siderbar .logo img{
-    height: 30px;
+    height: 35px;
 }
 .siderbar .nav{
     padding: 50px 35px;
@@ -129,6 +129,7 @@
     background: #e2e2e2;
     border-radius: 20px;
     background-size: cover !important;
+    margin-right: 25px;
 }
 .home-page .section .courses .block .user{
     padding: 20px;
@@ -161,3 +162,32 @@
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.33);
     z-index: 1;
 }
+
+.home-page .section .courses .block .course-title{
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    text-shadow: 1px 1px 1px #000;
+}
+.home-page .section .user-block{
+    margin: 0px 50px 0px 0px;
+}
+.home-page .section .user-block .pic{
+    width: 40px;
+    height: 40px;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 10px;
+}
+.home-page .section .user-block .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.home-page .section .user-block .meta{}
+.home-page .section .user-block .meta .name{}
+.home-page .section .user-block .meta .uname{}
