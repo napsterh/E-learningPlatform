@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Course1 from "../ui/curso1.png";
 import Course2 from "../ui/curso2.png";
 
+import Cake from "../ui/cake.png";
+
 function Rightbar(){
 
     const [popularCourse, setpopularCourse] = useState([
@@ -96,6 +98,22 @@ function Rightbar(){
                         {courseList[1]}
                         {courseList[2]}
                     </div>
+                </div>
+            </div>
+
+            <div className="section section-b rel">
+            <h2 className="title s24 fontb">Ofertas <span className="fontn">
+                 Especiales</span></h2>
+                <div className="special-offer rel flex">
+                    <div className="meta rel">
+                        <h2 className="h1 s20 fontb">30 días Premium</h2>
+                        <h2 className="h2 s14 fontb">Obténlo antes del 10/04/2020</h2>
+                        <button className="s15 fontb">Leer más</button>
+                    </div>
+                    <div className="vector rel">
+                        <img src={Cake}/>
+                    </div>
+                    <div className="ring abs"/>
                 </div>
             </div>
 
