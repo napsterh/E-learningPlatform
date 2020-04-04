@@ -6,10 +6,12 @@ import './css/props.css';
 import './css/App.css';
 
 //screen
-import Header  from "./screens/header";
-import Siderbar  from "./screens/siderbar";
-import HomePage  from "./screens/home";
-import Rightbar  from "./screens/rightbar";
+import Header from "./screens/header";
+import Siderbar from "./screens/siderbar";
+import HomePage from "./screens/home";
+import Rightbar from "./screens/rightbar";
+
+import CoursePage from "./screens/course";
 
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
     <div className="App flex">
       <Siderbar/>
       <div className="app-content">
-      <HomePage/>
+      <CoursePage/>
       </div>
       <Rightbar/>
     </div>
