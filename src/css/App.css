@@ -8,9 +8,10 @@
 
 
 .player{
-    width: 58%;
+    width: 61%;
     height: 55%;
     background: black;
+    margin-left: 160px;
 }
 .player video{
     width: 100%;
