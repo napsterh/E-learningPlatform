@@ -42,10 +42,13 @@ select, textarea, input{
     text-decoration: none;
 }
 
-
+.ibl{
+    display: inline-block;
+}
 .bl{
     display: block;
 }
+
 .cfff{
     color: #fff;
 }
