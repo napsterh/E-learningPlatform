@@ -475,6 +475,11 @@
     text-align: left;
     justify-content: flex-start;
     padding: 30px;
+    margin: 10px 0px;
+    background: #00000017;
+    border-radius: 10px;
+    width: 93%;
+    padding: 30px;
 }
 .chat .messages .bubble{
     align-self: flex-start;
@@ -510,7 +515,16 @@
     margin-bottom: 30px;
 }
 .now-watching .you-list{
-    margin-top: 25px;
+    margin-top: 4px;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 30px;
+    margin: 10px 0px;
+    background: #00000017;
+    border-radius: 10px;
+    width: 86%;
+    padding: 30px;
 }
 .now-watching .you .pic{
     width: 40px;

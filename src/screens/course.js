@@ -147,6 +147,9 @@ function CoursePage(){
                                     <div className="bubble bubble-mine rel">
                                         <h2 className="txt ibl fontn s15 c333">Buena intro, gracias...</h2>
                                     </div>
+                                    <div className="bubble bubble-mine rel">
+                                        <h2 className="txt ibl fontn s15 c333">Seguiré practicando</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
