@@ -13,7 +13,7 @@ import Rightbar from "./screens/rightbar";
 
 import CoursePage from "./screens/course";
 
-
+// <Rightbar/>
 function App() {
   return (
     <div className="App flex">
@@ -21,7 +21,7 @@ function App() {
       <div className="app-content">
       <CoursePage/>
       </div>
-      <Rightbar/>
+     
     </div>
   );
 }

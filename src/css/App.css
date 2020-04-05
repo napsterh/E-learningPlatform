@@ -1,3 +1,90 @@
+
+.App{
+    padding: 0px 20px 0px 0px;
+}
+
+
+/***************      VIDEO PLAYER       ************************/
+
+
+.player{
+    width: 100%;
+    height: 55%;
+    background: black;
+}
+.player video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player .ctrls{
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 80px;
+    background: rgba(103, 102, 102, 0.42);
+    z-index: 9;
+    padding: 0px 15px;
+}
+.player .ctrls .pp{
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #674EA7;
+    color: #fff;
+}
+.player .ctrls .timer{
+    flex: 1;
+    margin: 0px;
+    text-align: center;
+}
+.player .ctrls .slider{
+    flex: 3;
+}
+.player .ctrls .slider .prog{
+    width: 100%;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.player .ctrls .slider .bar{
+    width: 22%;
+    height: 10px;
+    background: #674EA7;
+    border-radius: 10px;
+}
+.player .ctrls .slider .bar .knob{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 5px #000;
+}
+.player .ctrls .vol{
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(234, 82, 82, 0);
+    color: #fff;
+    margin: 0px 1px;
+}
+.player .ctrls .fs{
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(234, 82, 82, 0);
+    color: #fff;
+    margin: 0px 1px;
+}
+
+
+
 /***************      SIDERBAR        ************************/
 
 .siderbar{
@@ -41,23 +128,27 @@
 .siderbar .updated-course .lbl{}
 .siderbar .updated-course .lbl .author{}
 
-.siderbar .stats{
+.course-stats, .siderbar .stats{
     padding: 50px 40px;
 }
-.siderbar .stats .stats-box{
+.course-stats .stats-box, .siderbar .stats .stats-box{
     flex-direction: column;
     width: 110px;
 }
-.siderbar .stats .stats-box .ico{
+.course-stats .stats-box .ico ,.siderbar .stats .stats-box .ico{
     margin-bottom: 15px;
 }
 .siderbar .stats .stats-box .val{}
 .siderbar .stats .stats-box .lbl{}
-.siderbar .stats .stats-box .ico-heart{
+.course-stats .ico-heart, .siderbar .stats .stats-box .ico-heart{
     color: red;
 }
-.siderbar .stats .stats-box .ico-heartbeat{
+.course-stats .ico-heartbeat, .siderbar .stats .stats-box .ico-heartbeat{
     color: green;
+}
+
+.course-stats .ico-thermometer{
+    color: #784bea;
 }
 
 .siderbar .me{
@@ -202,10 +293,12 @@
 .home-page .section .user-block .meta .uname{}
 
 
-.App{
-    padding: 0px 20px 0px 0px;
-}
+
+
 /*******************         RIGHTBAR          *********************/
+
+
+
 
 .rightbar{
     flex: 1;
@@ -296,5 +389,67 @@
     top: 17%;
     transform: translateY(-50px);
     border: 40px rgba(255, 255, 255, 0.45) solid;
+}
+
+
+/*******************         VISTA PREVIA CURSOS          *********************/
+
+
+
+.course-page{}
+.course-info{
+    flex: 1;
+}
+.course-page .tutor{}
+.course-page .tutor .pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #eee;
+    margin-right: 10px;
+}
+.course-page .tutor .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.course-page .tutor .meta{}
+.course-page .tutor .meta .name{}
+.course-page .tutor .meta .uname{}
+.course-page .course-meta{
+    padding: 40px 0px;
+}
+.course-page .course-meta .title{
+    font-weight: 600;
+}
+.course-page .course-meta .about{
+
+}
+
+.course-videos{
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0px;
+}
+.course-videos a{
+    margin: 10px 0px;
+}
+.course-videos a .id{
+    background: #563d94;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+.course-videos a .meta{}
+.course-videos a .meta .lbl{}
+.course-videos a .meta .dur{}
+.course-videos a:hover{}
+
+.course-preview{
+    flex: 2;
+    margin-left: 20px;
 }
 
