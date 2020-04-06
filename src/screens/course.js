@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
 import Course1 from "../ui/curso1.png";
-import Course2 from "../ui/curso2.png";
+import Preview from "../ui/preview.png";
 
-function CoursePage(){
+function CoursePage(props){
 
     const [course, setCourse] = useState(
         {
@@ -17,7 +17,7 @@ function CoursePage(){
                 dp: "http://placeimg.com/111/102/people?tutor" + 1,
             },
             duration: "1hr 22min",
-            poster: Course1,
+            poster: Preview,
 
             videos: [
                 {
@@ -38,6 +38,8 @@ function CoursePage(){
             ]
         }
     );
+
+    const courseID = props.match.params.courseid;
 
     var courseVideos = [];
     for(let i=0; i < course.videos.length; i++){
@@ -164,13 +166,13 @@ function CoursePage(){
                                             <img src="http://placeimg.com/111/102/people?guest-1" className="bl"/>
                                         </div>
                                         <div className="meta rel">
-                                            <h2 className="s15 name fontb c333">Victor Zamora</h2>
-                                            <h2 className="s13 uname fontn c777">@vzamora</h2>
+                                            <h2 className="s15 name fontb c333">Ana Fernández</h2>
+                                            <h2 className="s13 uname fontn c777">@afernandez</h2>
                                         </div>
                                     </div>
                                     <div className="you rel aic flex">
                                         <div className="pic">
-                                            <img src="http://placeimg.com/111/102/people?guest-2" className="bl"/>
+                                            <img src="http://placeimg.com/111/102/people?guest-8" className="bl"/>
                                         </div>
                                         <div className="meta rel">
                                             <h2 className="s15 name fontb c333">Abel Tarazona</h2>
@@ -179,11 +181,11 @@ function CoursePage(){
                                     </div>
                                     <div className="you rel aic flex">
                                         <div className="pic">
-                                            <img src="http://placeimg.com/111/102/people?guest-3" className="bl"/>
+                                            <img src="http://placeimg.com/111/102/people?guest-7" className="bl"/>
                                         </div>
                                         <div className="meta rel">
-                                            <h2 className="s15 name fontb c333">José Perez</h2>
-                                            <h2 className="s13 uname fontn c777">@jperez</h2>
+                                            <h2 className="s15 name fontb c333">Homer López</h2>
+                                            <h2 className="s13 uname fontn c777">@napsterh</h2>
                                         </div>
                                     </div>
                                     <div className="you rel aic flex">

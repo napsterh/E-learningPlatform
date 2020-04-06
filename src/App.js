@@ -12,16 +12,22 @@ import HomePage from "./screens/home";
 import Rightbar from "./screens/rightbar";
 
 import CoursePage from "./screens/course";
+import DiscoverPage from "./screens/discover";
+
+import { Route, NavLink, HashRouter } from 'react-router-dom';
 
 // <Rightbar/>
 function App() {
   return (
     <div className="App flex">
-      <Siderbar/>
-      <div className="app-content">
-      <CoursePage/>
-      </div>
-     
+      <HashRouter>
+        <Siderbar/>
+        <div className="app-content">
+          <Route exact path="/" component={HomePage}/>
+          <Route path="/course/:courseid" component={CoursePage}/>
+          <Route path="/discover" component={DiscoverPage}/>
+        </div>
+      </HashRouter>
     </div>
   );
 }
