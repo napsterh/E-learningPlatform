@@ -13,6 +13,8 @@ import Rightbar from "./screens/rightbar";
 
 import CoursePage from "./screens/course";
 import DiscoverPage from "./screens/discover";
+import CategoriesPage from "./screens/categories";
+import MyCoursesPage from "./screens/mycourses";
 
 import { Route, NavLink, HashRouter } from 'react-router-dom';
 
@@ -23,9 +25,11 @@ function App() {
       <HashRouter>
         <Siderbar/>
         <div className="app-content">
-          <Route exact path="/" component={HomePage}/>
+          <Route exact path="/" component={HomePage} />
           <Route path="/course/:courseid" component={CoursePage}/>
-          <Route path="/discover" component={DiscoverPage}/>
+          <Route path="/descubrir" component={DiscoverPage}/>
+          <Route path="/categoria" component={CategoriesPage}/>
+          <Route path="/mis-cursos" component={MyCoursesPage}/>
         </div>
       </HashRouter>
     </div>

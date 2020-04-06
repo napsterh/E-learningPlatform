@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState} from "react";
 
 import Course1 from "../ui/curso1.png";
 import Course2 from "../ui/curso2.png";
@@ -6,6 +6,10 @@ import Course2 from "../ui/curso2.png";
 import { NavLink } from 'react-router-dom';
 
 function HomePage(){
+
+    useEffect( () => {
+        document.title = "iMedly";
+    })
 
     const [popularCourse, setpopularCourse] = useState([
         {
