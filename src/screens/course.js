@@ -59,6 +59,47 @@ function CoursePage(props){
         <div className="course-page rel flex">
 
             <div className="course-preview rel">
+
+                <div className="tutor rel aic flex">
+                    <div className="pic">
+                        <img src={course.tutor.dp} className="bl"/>
+                    </div>
+                    <div className="meta rel">
+                        <h2 className="s15 name fontb c333">{course.tutor.name}</h2>
+                        <h2 className="s13 uname fontn c777">Tutor del curso</h2>
+                    </div>
+                </div>
+
+                <div className="course-meta">
+                    <h2 className="s24 title fontb c333">{course.title}</h2>
+                    <p className="s18 about fontn c777" dangerouslySetInnerHTML={{__html: course.about}}/>
+                </div>
+
+                <div className="section section-b rel">
+                    <h2 className="title s24 fontb">Cursos <span className="fontn">
+                    logrados</span></h2>
+                    <div className="course-stats aic flex">
+                    <div className="stats-box flex">
+                        <div className="ico ico-heart s24 fas fa-heart"/>
+                        <h2 className="val s15 c333 fontb">1800</h2>
+                        <h2 className="lbl s13 c777">puntos</h2>
+                    </div>
+
+                    <div className="stats-box flex">
+                        <div className="ico ico-heartbeat s24 fas fa-heartbeat"/>
+                        <h2 className="val s15 c333 fontb">45.3%</h2>
+                        <h2 className="lbl s13 c777">completo</h2>
+                    </div>
+
+                    <div className="stats-box flex">
+                        <div className="ico ico-thermometer s24 fas fa-thermometer"/>
+                        <h2 className="val s15 c333 fontb">+21</h2>
+                        <h2 className="lbl s13 c777">nivel</h2>
+                    </div>
+
+                    </div>
+                </div>
+
                 <div className="player rel">
                     <video poster={course.poster}/>
                     <div className="ctrls abs aic flex">
@@ -78,7 +119,13 @@ function CoursePage(props){
                     </div>
                 </div>
 
-                <div className="extras-block rel flex">
+                
+            
+            </div>
+
+            <div className="course-info rel">
+
+            <div className="extras-block rel flex">
                     
                     <div className="chat rel">
                         <div className="section section-b rel">
@@ -147,50 +194,6 @@ function CoursePage(props){
                                     </div>
                                 </div>
                             </div>
-                    </div>
-                </div>
-            
-            </div>
-
-            <div className="course-info rel">
-
-                <div className="tutor rel aic flex">
-                    <div className="pic">
-                        <img src={course.tutor.dp} className="bl"/>
-                    </div>
-                    <div className="meta rel">
-                        <h2 className="s15 name fontb c333">{course.tutor.name}</h2>
-                        <h2 className="s13 uname fontn c777">Tutor del curso</h2>
-                    </div>
-                </div>
-
-                <div className="course-meta">
-                    <h2 className="s24 title fontb c333">{course.title}</h2>
-                    <p className="s18 about fontn c777" dangerouslySetInnerHTML={{__html: course.about}}/>
-                </div>
-
-                <div className="section section-b rel">
-                    <h2 className="title s24 fontb">Cursos <span className="fontn">
-                    logrados</span></h2>
-                    <div className="course-stats aic flex">
-                    <div className="stats-box flex">
-                        <div className="ico ico-heart s24 fas fa-heart"/>
-                        <h2 className="val s15 c333 fontb">1800</h2>
-                        <h2 className="lbl s13 c777">puntos</h2>
-                    </div>
-
-                    <div className="stats-box flex">
-                        <div className="ico ico-heartbeat s24 fas fa-heartbeat"/>
-                        <h2 className="val s15 c333 fontb">45.3%</h2>
-                        <h2 className="lbl s13 c777">completo</h2>
-                    </div>
-
-                    <div className="stats-box flex">
-                        <div className="ico ico-thermometer s24 fas fa-thermometer"/>
-                        <h2 className="val s15 c333 fontb">+21</h2>
-                        <h2 className="lbl s13 c777">nivel</h2>
-                    </div>
-
                     </div>
                 </div>
 
