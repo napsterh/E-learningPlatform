@@ -3,13 +3,48 @@
     padding: 0px 20px 0px 0px;
 }
 
+/***************      TOOLTIP            ************************/
+
+  .you .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -100%;
+    left: 38%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .you .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .you:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
 
 /***************      VIDEO PLAYER       ************************/
 
 
 .player{
     width: 100%;
-    height: 50%;
+    height: 65%;
     background: black;
 }
 .player video{
@@ -148,9 +183,11 @@
 .siderbar .stats .stats-box .lbl{}
 .course-stats .ico-heart, .siderbar .stats .stats-box .ico-heart{
     color: red;
+    margin-top: 10px;
 }
 .course-stats .ico-heartbeat, .siderbar .stats .stats-box .ico-heartbeat{
     color: green;
+    margin-top: 10px;
 }
 
 .course-stats .ico-thermometer{
@@ -215,7 +252,15 @@
 }
 
 .section-b{
-    margin-top:50px;
+    margin-top: 0px;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 30px;
+    margin: 0px 0px;
+    /* background: #00000017; */
+    border-radius: 10px;
+    width: 100%;
+    padding: 0px;
 }
 
 .section .courses{}
@@ -407,7 +452,9 @@
     flex: 1;
     margin-left: 20px;
 }
-.course-page .tutor{}
+.course-page .tutor{
+    margin-top: 40px;
+}
 .course-page .tutor .pic{
     width: 40px;
     height: 40px;
@@ -442,7 +489,7 @@
     margin: 10px 0px;
     background: #00000017;
     border-radius: 10px;
-    width: 93%;
+    width: 100%;
     padding: 5px;
 }
 .course-videos a .id{
@@ -460,7 +507,7 @@
 .course-videos a:hover{}
 
 .course-preview{
-    flex: 1;
+    flex: 2;
 }
 
 .extra-block{
@@ -479,7 +526,7 @@
     margin: 10px 0px;
     background: #00000017;
     border-radius: 10px;
-    width: 93%;
+    width: 100%;
     padding: 30px;
 }
 .chat .messages .bubble{
@@ -507,25 +554,26 @@
 }
 .now-watching .tooltip{
     background: #674EA7;
-    top: 50px;
+    top: 3px;
     right: 0px;
     padding: 8px 15px;
     border-radius: 10px;
 }
 .now-watching .you{
-    margin-bottom: 30px;
+    margin-bottom: 2px;
+    padding: 5px;
 }
+
 .now-watching .you-list{
     margin-top: 4px;
-    flex-direction: column;
     text-align: left;
     justify-content: flex-start;
     padding: 30px;
     margin: 10px 0px;
     background: #00000017;
     border-radius: 10px;
-    width: 86%;
-    padding: 30px;
+    width: 100%;
+    padding: 5px;
 }
 .now-watching .you .pic{
     width: 40px;
@@ -538,6 +586,7 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
+    border: 2px #674EA7 solid;
 }
 .now-watching .you .meta{}
 .now-watching .you .meta .name{}
