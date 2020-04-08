@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import Course1 from "../ui/curso1.png";
-import Preview from "../ui/preview.jpg";
+import Preview from "../ui/preview.png";
 
 function CoursePage(props){
 
@@ -69,11 +69,10 @@ function CoursePage(props){
 
             <div className="course-preview rel">
 
-               
-
                 <div className="player rel">
-                    <video poster={course.poster}/>
-                    <div className="ctrls abs aic flex">
+                    <iframe className="youtube rel" src="https://www.youtube.com/embed/A-Ko6FmzEjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   {/*  
+                   <div className="ctrls abs aic flex">
                         <button className="fas fa-pause s24 pp"/>
                         <div className="timer rel fontn s15 cfff">
                             02:51 / 09:54
@@ -88,6 +87,7 @@ function CoursePage(props){
                         <button className="fas fa-volume-up s24 vol"/>
                         <button className="fas fa-expand s24 fs"/>
                     </div>
+                    */}
                 </div>
 
                 <div className="tutor rel aic flex">
@@ -238,3 +238,5 @@ function CoursePage(props){
 }
 
 export default CoursePage;
+
+ 
