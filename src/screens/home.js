@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
 
 import Course1 from "../ui/curso1.png";
-import Course2 from "../ui/curso2.png";
+import Cardiograma from "../ui/cardiograma.jpg";
 
 import { NavLink } from 'react-router-dom';
 import  Rightbar  from './rightbar';
@@ -15,15 +15,15 @@ function HomePage(){
     const [popularCourse, setpopularCourse] = useState([
         {
             ID: 1,
-            title: "Generación de reportes epidemiológicos del COVID-19",
+            title: "Electrocardiograma - Nociones Básicas",
             tutor: {
                 ID: 1,
-                name: "Victor Zamora",
+                name: "Ernesto Salazar",
                 username: "vzamora",
                 dp: "http://placeimg.com/111/102/people?tutor" + 1,
             },
             duration: "1hr 22min",
-            poster: Course2
+            poster: Cardiograma
         },
         {
             ID: 2,

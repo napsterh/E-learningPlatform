@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import Course1 from "../ui/curso1.png";
+import Trauma from "../ui/traumatologia.jpg";
+import Cardiologia from "../ui/cardiologia.jpg";
 import Course2 from "../ui/curso2.png";
 
 import Cake from "../ui/cake.png";
@@ -14,7 +15,7 @@ function Rightbar(){
             tutor: {
                 ID: 1,
                 name: "Victor Zamora",
-                username: "vzamora",
+                username: "etapia",
                 dp: "http://placeimg.com/111/102/people?tutor" + 1,
             },
             duration: "1hr 22min",
@@ -22,27 +23,27 @@ function Rightbar(){
         },
         {
             ID: 2,
-            title: "Tratamiento de pacientes con transtornos psicológicos",
+            title: "Nociones básicas para el tratamiento del corazón",
             tutor: {
                 ID: 2,
-                name: "Sigmund Freud",
-                username: "sfreud",
+                name: "Dr. José Rosales",
+                username: "jrosales",
                 dp: "http://placeimg.com/111/102/people?tutor" + 2,
             },
             duration: "60 min",
-            poster: Course1
+            poster: Cardiologia
         },
         {
             ID: 3,
-            title: "Tratamiento de pacientes con transtornos psicológicos",
+            title: "Identificación de problemas articulares congénitos",
             tutor: {
                 ID: 2,
-                name: "Sigmund Freud",
-                username: "sfreud",
+                name: "Dra. Maria Cevallos",
+                username: "mzevallos",
                 dp: "http://placeimg.com/111/102/people?tutor" + 3,
             },
             duration: "60 min",
-            poster: Course1
+            poster: Trauma
         }
     ])
 

@@ -48,7 +48,7 @@
 }
 .player{
     width: 100%;
-    height: 69%;
+    height: 84%;
     background: black;
 }
 .player video{
@@ -362,7 +362,7 @@
 
 .rightbar{
     flex: 1;
-    padding: 20px 0px;
+    padding: 0px 0px;
 }
 
 .rightbar .search-box{
@@ -454,7 +454,27 @@
 
 /*******************         VISTA PREVIA CURSOS          *********************/
 
+.you-list .chat .ico{
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
+.you-list .chat {
+    margin: 10px;
+}
+.you-list .chat .pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.you-list .chat .pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #eee;
+    margin-right: 10px;
+}
 
 .course-page{}
 .course-info{
@@ -462,6 +482,9 @@
     margin-left: 20px;
 }
 .course-page .tutor{
+    margin-top: 40px;
+}
+.course-page .title{
     margin-top: 40px;
 }
 .course-page .tutor .pic{
@@ -536,7 +559,7 @@
     background: #00000017;
     border-radius: 10px;
     width: 100%;
-    padding: 30px;
+    padding: 10px;
 }
 .chat .messages .bubble{
     align-self: flex-start;
@@ -573,7 +596,7 @@
     padding: 5px;
 }
 
-.now-watching .you-list{
+.now-watching .you-list {
     margin-top: 4px;
     text-align: left;
     justify-content: flex-start;
@@ -602,3 +625,14 @@
 .now-watching .you .meta .uname{}
 
 
+.primer{
+    flex: 1;
+}
+
+.segundo{
+    flex: 1;
+}
+
+.prise{
+    display: flex;
+}

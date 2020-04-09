@@ -8,12 +8,12 @@ function CoursePage(props){
     const [course, setCourse] = useState(
         {
             ID: 1,
-            title: "Generación de reportes epidemiológicos del COVID-19",
-            about: "Este curso te ayudará a generar reportes de todos los datos informativos respecto al covid-19 a nivel nacional y con referencia al resto del mundo.",
+            title: "Electrocardiograma - Nociones Básicas",
+            about: "Este curso te ayudará a generar reportes de electrocardiogramas para determinar males congénitos previos a un diagnostico general puestos en los ultimos 10 días",
             tutor: {
                 ID: 1,
-                name: "Victor Zamora",
-                username: "vzamora",
+                name: "Ernesto Salazar",
+                username: "esalazar",
                 dp: "http://placeimg.com/111/102/people?tutor" + 1,
             },
             duration: "1hr 22min",
@@ -32,7 +32,7 @@ function CoursePage(props){
                 },
                 {
                     ID: 1,
-                    title: "Epidemiología en el Perú",
+                    title: "Reportes de electrocardiogramas en pacientes hipertensos en latinoamérica",
                     duration: "10 min 13 seg"
                 },
                 {
@@ -41,12 +41,22 @@ function CoursePage(props){
                     duration: "23 min 56 seg"
                 },{
                     ID: 1,
-                    title: "Reporte epidemiológicos por paises en latinoamérica",
+                    title: "Electrocardiograma en el Perú",
                     duration: "50 min "
                 }
             ]
         }
     );
+
+    const [chat, setChat] = useState(
+        { 
+            ID: 1,
+            name: "Homer López",
+            cargo: "Estudiante",
+            mensaje: "Este curso es fantastico",
+            dp: "http://placeimg.com/111/102/people?tutor" + 1,
+        }
+    ); 
 
     const courseID = props.match.params.courseid;
 
@@ -89,44 +99,56 @@ function CoursePage(props){
                     </div>
                     */}
                 </div>
+                <div className="prise">
+                    <div className="primer">    
 
-                <div className="tutor rel aic flex">
-                    <div className="pic">
-                        <img src={course.tutor.dp} className="bl"/>
+                    <div className="tutor rel aic flex">
+                        <div className="pic">
+                            <img src={course.tutor.dp} className="bl"/>
+                        </div>
+                        <div className="meta rel">
+                            <h2 className="s15 name fontb c333">{course.tutor.name}</h2>
+                            <h2 className="s13 uname fontn c777">Tutor del curso</h2>
+                        </div>
                     </div>
-                    <div className="meta rel">
-                        <h2 className="s15 name fontb c333">{course.tutor.name}</h2>
-                        <h2 className="s13 uname fontn c777">Tutor del curso</h2>
+
+                    <div className="course-meta">
+                        <h2 className="s24 title fontb c333">{course.title}</h2>
+                        <p className="s18 about fontn c777" dangerouslySetInnerHTML={{__html: course.about}}/>
                     </div>
+
+                    <div className="section section-b rel">
+                        <h2 className="title s24 fontb">Cursos <span className="fontn">
+                        logrados</span></h2>
+                        <div className="course-stats aic flex">
+                        <div className="stats-box flex">
+                            <div className="ico ico-heart s24 fas fa-heart"/>
+                            <h2 className="val s15 c333 fontb">1800</h2>
+                            <h2 className="lbl s13 c777">puntos</h2>
+                        </div>
+
+                        <div className="stats-box flex">
+                            <div className="ico ico-heartbeat s24 fas fa-heartbeat"/>
+                            <h2 className="val s15 c333 fontb">45.3%</h2>
+                            <h2 className="lbl s13 c777">completo</h2>
+                        </div>
+
+                        <div className="stats-box flex">
+                            <div className="ico ico-thermometer s24 fas fa-thermometer"/>
+                            <h2 className="val s15 c333 fontb">+21</h2>
+                            <h2 className="lbl s13 c777">nivel</h2>
+                        </div>
+
+                        </div>
+                    </div>
+
                 </div>
-
-                <div className="course-meta">
-                    <h2 className="s24 title fontb c333">{course.title}</h2>
-                    <p className="s18 about fontn c777" dangerouslySetInnerHTML={{__html: course.about}}/>
-                </div>
-
-                <div className="section section-b rel">
-                    <h2 className="title s24 fontb">Cursos <span className="fontn">
-                    logrados</span></h2>
-                    <div className="course-stats aic flex">
-                    <div className="stats-box flex">
-                        <div className="ico ico-heart s24 fas fa-heart"/>
-                        <h2 className="val s15 c333 fontb">1800</h2>
-                        <h2 className="lbl s13 c777">puntos</h2>
-                    </div>
-
-                    <div className="stats-box flex">
-                        <div className="ico ico-heartbeat s24 fas fa-heartbeat"/>
-                        <h2 className="val s15 c333 fontb">45.3%</h2>
-                        <h2 className="lbl s13 c777">completo</h2>
-                    </div>
-
-                    <div className="stats-box flex">
-                        <div className="ico ico-thermometer s24 fas fa-thermometer"/>
-                        <h2 className="val s15 c333 fontb">+21</h2>
-                        <h2 className="lbl s13 c777">nivel</h2>
-                    </div>
-
+                    <div className="segundo rel">
+                        <h2 className="title s24 fontb">Detalles <span className="fontn">
+                        del curso</span></h2>
+                        <div className="course-videos aic flex">
+                            {courseVideos}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,36 +222,88 @@ function CoursePage(props){
                 </div>
 
                 <div className="section section-b rel">
-                <div className="chat rel">
-                        <div className="section section-b rel">
-                            <h2 className="title s24 fontb">Chat <span className="fontn">
-                            en curso</span></h2>
-                            <div className="messages aic flex">
-                                <div className="bubble rel">
-                                    <h2 className="txt ibl fontn s15 c333">Soy Homer</h2>
+                    <h2 className="title s24 fontb">Foro <span className="fontn">en curso</span></h2>
+                    <div className="now-watching rel">
+                        <div className="you-list rel">
+                            <div className="chat rel aic flex">
+                                <div className="pic">
+                                    <img src={course.tutor.dp} className="bl"/>
                                 </div>
-                                <div className="bubble rel">
-                                    <h2 className="txt ibl fontn s15 c333">me gusta este curso</h2>
-                                </div>
-                                <div className="bubble  bubble-mine rel">
-                                    <h2 className="txt ibl fontn s15 c333">Hey</h2>
-                                </div>
-                                <div className="bubble bubble-mine rel">
-                                    <h2 className="txt ibl fontn s15 c333">Buena intro, gracias...</h2>
-                                </div>
-                                <div className="bubble bubble-mine rel">
-                                    <h2 className="txt ibl fontn s15 c333">Seguiré practicando</h2>
+                                <div className="meta rel">
+                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
+                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
                                 </div>
                             </div>
+                            <div className="chat rel aic ">
+                                <h2 className="s15 name c333">{chat.mensaje}</h2>
+                            </div>
+                            <hr></hr>
+                            <div className="chat rel aic ">
+                                <div className="fas fa-reply fa-lg ico"/>
+                                <div className="far fa-heart fa-lg ico"/>
+                                <div className="fas fa-share-alt fa-lg ico"/>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div className="section section-b rel">
-                    <h2 className="title s24 fontb">Detalles <span className="fontn">
-                    del curso</span></h2>
-                    <div className="course-videos aic flex">
-                        {courseVideos}
+                        <div className="you-list rel">
+                            <div className="chat rel aic flex">
+                                <div className="pic">
+                                    <img src={course.tutor.dp} className="bl"/>
+                                </div>
+                                <div className="meta rel">
+                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
+                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
+                                </div>
+                            </div>
+                            <div className="chat rel aic ">
+                                <h2 className="s15 name c333">{chat.mensaje}</h2>
+                            </div>
+                            <hr></hr>
+                            <div className="chat rel aic ">
+                                <div className="fas fa-reply fa-lg ico"/>
+                                <div className="far fa-heart fa-lg ico"/>
+                                <div className="fas fa-share-alt fa-lg ico"/>
+                            </div>
+                        </div>
+                        <div className="you-list rel">
+                            <div className="chat rel aic flex">
+                                <div className="pic">
+                                    <img src={course.tutor.dp} className="bl"/>
+                                </div>
+                                <div className="meta rel">
+                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
+                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
+                                </div>
+                            </div>
+                            <div className="chat rel aic ">
+                                <h2 className="s15 name c333">{chat.mensaje}</h2>
+                            </div>
+                            <hr></hr>
+                            <div className="chat rel aic ">
+                                <div className="fas fa-reply fa-lg ico"/>
+                                <div className="far fa-heart fa-lg ico"/>
+                                <div className="fas fa-share-alt fa-lg ico"/>
+                            </div>
+                        </div>
+                        <div className="you-list rel">
+                            <div className="chat rel aic flex">
+                                <div className="pic">
+                                    <img src={course.tutor.dp} className="bl"/>
+                                </div>
+                                <div className="meta rel">
+                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
+                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
+                                </div>
+                            </div>
+                            <div className="chat rel aic ">
+                                <h2 className="s15 name c333">{chat.mensaje}</h2>
+                            </div>
+                            <hr></hr>
+                            <div className="chat rel aic ">
+                                <div className="fas fa-reply fa-lg ico"/>
+                                <div className="far fa-heart fa-lg ico"/>
+                                <div className="fas fa-share-alt fa-lg ico"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
