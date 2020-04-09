@@ -262,7 +262,7 @@
     text-align: left;
     justify-content: flex-start;
     padding: 30px;
-    margin: 0px 0px;
+    margin: 30px 0px;
     /* background: #00000017; */
     border-radius: 10px;
     width: 100%;
@@ -356,7 +356,7 @@
 
 
 .right{
-    flex: 2 1;
+    flex: 1 1;
     padding: 20px;
 }
 
@@ -367,6 +367,7 @@
 
 .rightbar .search-box{
     margin: 10px 0px;
+    padding: 22px;
 }
 .rightbar .search-box .qry{
     flex: 1;
@@ -377,7 +378,7 @@
     border-radius: 5px;
 }
 .rightbar .search-box .qry:focus{
-    background: #dcdada;
+    background: #c1afef;
 }
 .rightbar .search-box .go{
     border: 0px;
@@ -503,7 +504,7 @@
 .course-page .tutor .meta .name{}
 .course-page .tutor .meta .uname{}
 .course-page .course-meta{
-    padding: 40px 0px;
+    padding: 0px 0px;
 }
 .course-page .course-meta .title{
     font-weight: 600;
@@ -602,7 +603,7 @@
     justify-content: flex-start;
     padding: 30px;
     margin: 10px 0px;
-    background: #00000017;
+    background: #6dff6d61;
     border-radius: 10px;
     width: 100%;
     padding: 5px;
@@ -635,4 +636,60 @@
 
 .prise{
     display: flex;
+}
+
+
+
+.now-chat{
+    flex: 1;
+    padding: 0px 0px;
+}
+
+.now-chat .search-box{
+    margin: 10px 0px;
+    padding: 2px;
+}
+.now-chat .search-box .qry{
+    flex: 1;
+    border: 0px;
+    padding: 15px;
+    background: #c7ffc7;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.now-chat .search-box .qry:focus{
+    background: #c1afef;
+}
+.now-chat .search-box .go{
+    border: 0px;
+    background: #674EA7;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+.now-chat .search-box .go:hover{
+    background: #563d94;
+}
+
+.now-chat .you-list {
+    margin-top: 4px;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 30px;
+    margin: 5px 0px;
+    background: #6dff6d61;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px;
+}
+.now-chat .search-box .pic {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    background: #ddd;
+    border-radius: 100%;
+}
+.now-chat .search-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
 }

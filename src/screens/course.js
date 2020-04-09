@@ -48,15 +48,55 @@ function CoursePage(props){
         }
     );
 
-    const [chat, setChat] = useState(
+    const [chat, setChat] = useState([ 
         { 
             ID: 1,
             name: "Homer López",
             cargo: "Estudiante",
             mensaje: "Este curso es fantastico",
+            dp: "http://placeimg.com/111/102/people?guest-4",
+        },
+        { 
+            ID: 3,
+            name: "Diego Ramos",
+            cargo: "Estudiante",
+            mensaje: "Hola amigos, recien empiezo y quisiera saber como puedo aprender mas mientras estoy sin dispositovo ni internet algun pdf que recomienden sobre estos temas lo basicoo, agradeceria mucho",
+            dp: "http://placeimg.com/111/102/people?tutor" + 2,
+        },
+        { 
+            ID: 2,
+            name: "Ernesto Salazar",
+            cargo: "Tutor",
+            mensaje: "Gracias por sus comentarios",
             dp: "http://placeimg.com/111/102/people?tutor" + 1,
         }
-    ); 
+    ])
+
+    var chatForo = [];
+    for(let i=0; i < chat.length; i++){
+        chatForo.push(
+            <div key={"course-video-" + i} className="you-list rel">
+                <div className="chat rel aic flex">
+                    <div className="pic">
+                        <img src={chat[i].dp} className="bl"/>
+                    </div>
+                    <div className="meta rel">
+                        <h2 className="s15 name fontb c333">{chat[i].name}</h2>
+                        <h2 className="s13 uname fontn c777">{chat[i].cargo}</h2>
+                    </div>
+                </div>
+                <div className="chat rel aic ">
+                    <h2 className="s15 name c333">{chat[i].mensaje}</h2>
+                </div>
+                <hr></hr>
+                <div className="chat rel aic ">
+                    <div className="fas fa-reply fa-lg ico"/>
+                    <div className="far fa-heart fa-lg ico"/>
+                    <div className="fas fa-share-alt fa-lg ico"/>
+                </div>
+            </div>
+        );
+    }
 
     const courseID = props.match.params.courseid;
 
@@ -223,87 +263,16 @@ function CoursePage(props){
 
                 <div className="section section-b rel">
                     <h2 className="title s24 fontb">Foro <span className="fontn">en curso</span></h2>
-                    <div className="now-watching rel">
-                        <div className="you-list rel">
-                            <div className="chat rel aic flex">
-                                <div className="pic">
-                                    <img src={course.tutor.dp} className="bl"/>
-                                </div>
-                                <div className="meta rel">
-                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
-                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
-                                </div>
+                    <div className="now-chat rel">
+                        <div className="search-box rel flex">
+                            <div className="pic">
+                                <img src="http://placeimg.com/111/102/people?guest-4" className="bl"/>
                             </div>
-                            <div className="chat rel aic ">
-                                <h2 className="s15 name c333">{chat.mensaje}</h2>
-                            </div>
-                            <hr></hr>
-                            <div className="chat rel aic ">
-                                <div className="fas fa-reply fa-lg ico"/>
-                                <div className="far fa-heart fa-lg ico"/>
-                                <div className="fas fa-share-alt fa-lg ico"/>
-                            </div>
-                        </div>
-                        <div className="you-list rel">
-                            <div className="chat rel aic flex">
-                                <div className="pic">
-                                    <img src={course.tutor.dp} className="bl"/>
-                                </div>
-                                <div className="meta rel">
-                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
-                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
-                                </div>
-                            </div>
-                            <div className="chat rel aic ">
-                                <h2 className="s15 name c333">{chat.mensaje}</h2>
-                            </div>
-                            <hr></hr>
-                            <div className="chat rel aic ">
-                                <div className="fas fa-reply fa-lg ico"/>
-                                <div className="far fa-heart fa-lg ico"/>
-                                <div className="fas fa-share-alt fa-lg ico"/>
-                            </div>
-                        </div>
-                        <div className="you-list rel">
-                            <div className="chat rel aic flex">
-                                <div className="pic">
-                                    <img src={course.tutor.dp} className="bl"/>
-                                </div>
-                                <div className="meta rel">
-                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
-                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
-                                </div>
-                            </div>
-                            <div className="chat rel aic ">
-                                <h2 className="s15 name c333">{chat.mensaje}</h2>
-                            </div>
-                            <hr></hr>
-                            <div className="chat rel aic ">
-                                <div className="fas fa-reply fa-lg ico"/>
-                                <div className="far fa-heart fa-lg ico"/>
-                                <div className="fas fa-share-alt fa-lg ico"/>
-                            </div>
-                        </div>
-                        <div className="you-list rel">
-                            <div className="chat rel aic flex">
-                                <div className="pic">
-                                    <img src={course.tutor.dp} className="bl"/>
-                                </div>
-                                <div className="meta rel">
-                                    <h2 className="s15 name fontb c333">{chat.name}</h2>
-                                    <h2 className="s13 uname fontn c777">{chat.cargo}</h2>
-                                </div>
-                            </div>
-                            <div className="chat rel aic ">
-                                <h2 className="s15 name c333">{chat.mensaje}</h2>
-                            </div>
-                            <hr></hr>
-                            <div className="chat rel aic ">
-                                <div className="fas fa-reply fa-lg ico"/>
-                                <div className="far fa-heart fa-lg ico"/>
-                                <div className="fas fa-share-alt fa-lg ico"/>
-                            </div>
-                        </div>
+                            <input type="text" placeholder="Escribe tu pregunta o comentario" 
+                            className="qry s13 fontb"/>
+                            <button className="go cfff s13 fontb">Enviar</button>
+                         </div>
+                        {chatForo}
                     </div>
                 </div>
             </div>
@@ -312,5 +281,3 @@ function CoursePage(props){
 }
 
 export default CoursePage;
-
- 
