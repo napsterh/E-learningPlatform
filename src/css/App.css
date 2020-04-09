@@ -48,7 +48,7 @@
 }
 .player{
     width: 100%;
-    height: 67%;
+    height: 69%;
     background: black;
 }
 .player video{
@@ -127,7 +127,7 @@
 /***************      SIDERBAR        ************************/
 
 .siderbar{
-    width: 275px;
+    width: 220px;
 }
 .siderbar .logo{
     padding: 20px 25px;
@@ -219,14 +219,14 @@
 
 
 .app-content{
-    flex: 2;
+    display: flex;
     padding: 20px 40px 20px 20px;
 }
 
 /*******************         HOME PAGE          *********************/
 
 .home-page{
-
+    flex: 4;
 }
 .home-page .section{
     
@@ -354,7 +354,9 @@
 /*******************         RIGHTBAR          *********************/
 
 
-
+.right{
+    flex: 1;
+}
 
 .rightbar{
     flex: 1;

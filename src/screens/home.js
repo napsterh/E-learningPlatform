@@ -4,6 +4,7 @@ import Course1 from "../ui/curso1.png";
 import Course2 from "../ui/curso2.png";
 
 import { NavLink } from 'react-router-dom';
+import  Rightbar  from './rightbar';
 
 function HomePage(){
 
@@ -137,35 +138,39 @@ function HomePage(){
     }
 
     return (
-        <div className="home-page rel">
-            {/****  PROFESORES EN VIVO  ****/}
-            <div className="section rel">
-                <h2 className="title s24 fontb">Streaming <span className="fontn">
-                 Ahora</span></h2>
-                <div className="tutors rel flex">
-                    {tutorList}
+        <React.Fragment>
+            <div className="home-page rel">
+                {/****  PROFESORES EN VIVO  ****/}
+                <div className="section rel">
+                    <h2 className="title s24 fontb">Streaming <span className="fontn">
+                    Ahora</span></h2>
+                    <div className="tutors rel flex">
+                        {tutorList}
+                    </div>
+                </div>
+
+                {/****  BANNER CURSOS POPULARES  ****/}
+                <div className="section section-b rel">
+                    <h2 className="title s24 fontb">Popular <span className="fontn">
+                    Esta semana</span></h2>
+                    <div className="courses rel flex">
+                        {courseList}
+                    </div>
+                </div>
+
+                {/****  TOP PROFESORES  ****/}
+                <div className="section section-b rel">
+                    <h2 className="title s24 fontb">Top <span className="fontn">
+                    profesores</span></h2>
+                    <div className="top-tutors rel flex">
+                        {topTutorsList}
+                    </div>
                 </div>
             </div>
-
-            {/****  BANNER CURSOS POPULARES  ****/}
-            <div className="section section-b rel">
-                <h2 className="title s24 fontb">Popular <span className="fontn">
-                 Esta semana</span></h2>
-                <div className="courses rel flex">
-                    {courseList}
-                </div>
+            <div className="right rel">
+                <Rightbar/>
             </div>
-
-            {/****  TOP PROFESORES  ****/}
-            <div className="section section-b rel">
-                <h2 className="title s24 fontb">Top <span className="fontn">
-                 profesores</span></h2>
-                <div className="top-tutors rel flex">
-                    {topTutorsList}
-                </div>
-            </div>
-
-        </div>
+        </React.Fragment>
     )
 }
 
