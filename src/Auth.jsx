@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp } from 'reactfire';
 
-export default (props) => {
+function Auth(props) {
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
 
@@ -22,3 +22,5 @@ export default (props) => {
         </div>
     )
 }
+
+export default Auth;

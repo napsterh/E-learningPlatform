@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './css/props.css';
 import './css/App.css';
 import { useFirebaseApp } from 'reactfire';
+import Auth from './Auth';
 
 //screen
 import Header from "./screens/header";
@@ -18,7 +19,7 @@ import CategoriesPage from "./screens/categories";
 import MyCoursesPage from "./screens/mycourses";
 
 import { Route, NavLink, HashRouter } from 'react-router-dom';
-import Auth from './Auth';
+
 
 // <Rightbar/>
 function App() {

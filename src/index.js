@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import firebaseConfig from './firebase-config';
+import Fire from './firebase-config';
 import { FirebaseAppProvider } from 'reactfire';
 
 ReactDOM.render((
-  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+  <FirebaseAppProvider firebaseConfig = {Fire}>
     <Suspense fallback={'Conectando la app...'}>
       <React.StrictMode>
         <App />
