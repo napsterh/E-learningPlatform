@@ -4,6 +4,7 @@ import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './css/props.css';
 import './css/App.css';
+import { useFirebaseApp } from 'reactfire';
 
 //screen
 import Header from "./screens/header";
@@ -20,6 +21,8 @@ import { Route, NavLink, HashRouter } from 'react-router-dom';
 
 // <Rightbar/>
 function App() {
+  const firebase = useFirebaseApp();
+  console.log(firebase);
   return (
     <div className="App flex">
       <HashRouter>
