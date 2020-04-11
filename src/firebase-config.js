@@ -1,5 +1,5 @@
 export default {
-    apiKey: "AIzaSyCq0se2sBq3x-g7vg5KANsu1NfBeeAMVeM",
+    apiKey: "IzaSyCq0se2sBq3x-g7vg5KANsu1NfBeeAMVeM",
     authDomain: "imedlyreact.firebaseapp.com",
     databaseURL: "https://imedlyreact.firebaseio.com",
     projectId: "imedlyreact",

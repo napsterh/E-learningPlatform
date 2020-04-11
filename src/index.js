@@ -4,17 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import firebaseConfig from './firebase-config';
-import {
-  FirebaseAppProvider
-} from 'reactfire';
+import { FirebaseAppProvider } from 'reactfire';
 
 ReactDOM.render((
-  <FirebaseAppProvider FirebaseAppProvider={firebaseConfig}>
-  <Suspense fallback={"Conectando la app..."}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Suspense>
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <Suspense fallback={'Conectando la app...'}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Suspense>
   </FirebaseAppProvider>
   ),document.getElementById('root'));
 
@@ -25,7 +23,7 @@ serviceWorker.unregister();
 
 
 /* Para cargar un servicio web como firebase
-colocar suspense y enviar un props de spinner por ejemplo para 
+colocar suspense y enviar un props de spinner por ejemplo para
 esperar la carga y despues renderizar, tambien se puyede colocar
 una frase co,o "Conectando la app..."
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 //import logo from './logo.svg';
 ///import './css/uifont.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -18,13 +18,14 @@ import CategoriesPage from "./screens/categories";
 import MyCoursesPage from "./screens/mycourses";
 
 import { Route, NavLink, HashRouter } from 'react-router-dom';
+import Auth from './Auth';
 
 // <Rightbar/>
 function App() {
   const firebase = useFirebaseApp();
-  console.log(firebase);
   return (
     <div className="App flex">
+      <Auth/>
       <HashRouter>
         <Siderbar/>
         <div className="app-content">
