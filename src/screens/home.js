@@ -5,6 +5,7 @@ import Cardiograma from "../ui/cardiograma.jpg";
 
 import { NavLink } from 'react-router-dom';
 import  Rightbar  from './rightbar';
+import Siderbar from "./siderbar";
 
 function HomePage(){
 
@@ -150,7 +151,11 @@ function HomePage(){
     }
 
     return (
+        
         <React.Fragment>
+            <div className="App flex">
+            <Siderbar/>
+            </div>
             <div className="home-page rel">
                 {/****  PROFESORES EN VIVO  ****/}
                 <div className="section rel">
