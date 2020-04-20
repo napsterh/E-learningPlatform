@@ -177,7 +177,7 @@
     background: #00000017;
     border-radius: 10px;
     margin: 2px;
-    padding: 2px;
+    padding: 10px;
     align-items: center;
 }
 .course-stats .stats-box .ico ,.siderbar .stats .stats-box .ico{
@@ -330,11 +330,11 @@
     flex-wrap: wrap;
 }
 .home-page .section .user-block{
-    margin: 0px 30px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 .home-page .section .user-block .pic{
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     border: 2px #fff solid;
     border-radius: 50%;
     padding: 3px;
@@ -536,7 +536,9 @@
     margin-right: 10px;
 }
 .course-videos a .meta{}
-.course-videos a .meta .lbl{}
+.course-videos a .meta .lbl{
+    padding: 10px;
+}
 .course-videos a .meta .dur{}
 .course-videos a:hover{}
 
@@ -604,7 +606,7 @@
     justify-content: flex-start;
     padding: 30px;
     margin: 10px 0px;
-    background: #6dff6d61;
+    background: #00000017;
     border-radius: 10px;
     width: 100%;
     padding: 5px;
@@ -654,7 +656,7 @@
     flex: 1;
     border: 0px;
     padding: 15px;
-    background: #c7ffc7;
+    background: #00000017;
     margin-right: 10px;
     border-radius: 5px;
 }
@@ -677,7 +679,7 @@
     justify-content: flex-start;
     padding: 30px;
     margin: 5px 0px;
-    background: #6dff6d61;
+    background: #00000017;
     border-radius: 10px;
     width: 100%;
     padding: 5px;

@@ -55,7 +55,7 @@ function CoursePage(props){
             name: "Homer López",
             cargo: "Estudiante",
             mensaje: "Este curso es fantastico",
-            dp: "http://placeimg.com/111/102/people?guest-4",
+            dp: "http://placeimg.com/111/102/people?guest-9",
         },
         { 
             ID: 3,
@@ -209,7 +209,7 @@ function CoursePage(props){
                                 <div className="you-list rel flex">
                                     <div className="you rel aic flex">
                                         <div className="pic">
-                                            <img src="http://placeimg.com/111/102/people?guest-1" className="bl"/>
+                                            <img src="http://placeimg.com/111/102/people?guest-9" className="bl"/>
                                         </div>
                                         <span class="tooltiptext">Maria Fernández</span>
                                     </div>
@@ -271,9 +271,9 @@ function CoursePage(props){
                         <div className="now-chat rel">
                             <div className="search-box rel flex">
                                 <div className="pic">
-                                    <img src="http://placeimg.com/111/102/people?guest-4" className="bl"/>
+                                    <img src="http://placeimg.com/111/102/people?guest-9" className="bl"/>
                                 </div>
-                                <input type="text" placeholder="Escribe tu pregunta o comentario" 
+                                <input type="text" placeholder="Escribe tu pregunta o comentario"
                                 className="qry s13 fontb"/>
                                 <button className="go cfff s13 fontb">Enviar</button>
                             </div>

@@ -24,14 +24,15 @@ import { Route, NavLink, HashRouter } from 'react-router-dom';
 
 // <Rightbar/>
 function App() {
-  const firebase = useFirebaseApp();
-  const user = useUser();
+
+  /*const firebase = useFirebaseApp();
+  const user = useUser();*/
+
   return (
     <div className="App flex">
       <HashRouter>
         <div className="app-content">
-          {user ? (<HomePage/>) : (<Auth/>)}
-          <Route path="/home" component={HomePage} />
+          <Route path="/" component={CoursePage} />
           <Route path="/course/:courseid" component={CoursePage}/>
           <Route path="/descubrir" component={DiscoverPage}/>
           <Route path="/categoria" component={CategoriesPage}/>
@@ -43,3 +44,5 @@ function App() {
 }
 
 export default App;
+
+

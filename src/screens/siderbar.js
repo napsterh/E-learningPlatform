@@ -69,9 +69,6 @@ function Siderbar(){
                         <h2 className="uname s13 c777">@napsterh</h2>
                     </div>
                 </div>
-                <div className="flex aic">
-                    <Auth/>
-                </div>
             </div>
         </React.Fragment>
     )

@@ -53,7 +53,7 @@ function Rightbar(){
             <a href="#" className="course rel" key={"popular-course-" + i}>
                 <div className="block rel" style={{
                     background: "#e2e2e2 url(" + popularCourse[i].poster +") no-repeat center"
-                }}> 
+                }}>
                     <div className="user abs aic flex">
                         <div className="pic">
                             <img src={popularCourse[i].tutor.dp} className="bl"/>
