@@ -1,6 +1,6 @@
 import React, { Component, useEffect } from 'react';
 import './App.css';
-import HomePage from "./component/vistas/home";
+import HomePage from './component/vistas/home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import RegistrarUser from './component/seguridad/RegistrarUsers';
 import Login from './component/seguridad/Login';
@@ -13,9 +13,6 @@ import RutaAutenticada from './component/seguridad/RutaAutenticada';
 
 import './css/props.css';
 import './css/App.css';
-
-
-
 
 
 function App(props) {
@@ -34,7 +31,8 @@ function App(props) {
 
 
   return autenticacionIniciada !== false ?(
-    <React.Fragment>
+    
+      <React.Fragment>
       <BrowserRouter>
             <Switch>
               <RutaAutenticada exact path="/" autenticadoFirebase={firebase.auth.currentUser} component={HomePage} />
@@ -43,7 +41,8 @@ function App(props) {
             </Switch>
 
       </BrowserRouter>
-    </React.Fragment>
+      </React.Fragment>
+  
   )
   : null
     ;

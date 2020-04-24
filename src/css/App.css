@@ -1,3 +1,6 @@
+.root{
+    display: flex;
+}
 
 .App{
     padding: 0px 20px 0px 0px;
@@ -696,3 +699,142 @@
     height: 100%;
     border-radius: 100%;
 }
+
+
+
+/**************************                 LOGIN              ************************************/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.h-login {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.h-login .h-login__one {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    padding: 0 25px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.h-login .h-login__one .h-login__card {
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+}
+
+.h-login .h-login__one .h-login__card .h-login__card--image img {
+    max-width: 150px;
+}
+
+.h-login .h-login__one .h-login__card .h-login__card--title {
+    margin: 20px 0;
+}
+
+.h-login .h-login__one .h-login__card .h-login__card--title h2 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.h-input input {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 15px 0;
+    background-color: #f5f5f5;
+    height: 48px;
+    padding: 5px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: .5px solid #ebebeb;
+}
+
+.h-login .h-login__one .h-login__card .h-login__card--actions {
+    text-align: right;
+    margin: 20px 0;
+}
+
+.h-button {
+    background-color: transparent;
+    border-radius: 25px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    padding: 8px 20px;
+    height: 38px;
+    min-width: 140px;
+}
+
+.h-button.h-button--raised {
+    border: none;
+    background-color: #563d94;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.h-button.h-button--raised:hover{
+    background: #25144e;
+    color: white;
+}
+
+.h-login .h-login__second {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.h-login .h-login__second .h-login__image {
+    width: 100%;
+    max-width: 580px;
+    margin: auto;
+    text-align: center;
+}
+
+.h-login .h-login__second .h-login__image img {
+    width: 100%;
+    max-width: 550px;
+}
+
+.h-login .h-login__second .h-login__image h2 {
+    margin: 25px 0;
+    font-weight: 500;
+}
+
+.h-login .h-login__second .h-login__image p {
+    font-size: 16px;
+    margin: 0;
+    line-height: normal;
+}
+
+

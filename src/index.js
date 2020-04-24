@@ -15,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <FirebaseContext.Provider value={new Firebase()}>
       <StateProvider initialState={initialState} reducer={mainReducer}>
-        <App />
+          <App />
       </StateProvider>
     </FirebaseContext.Provider>
   </React.StrictMode>,

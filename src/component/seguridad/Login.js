@@ -61,18 +61,36 @@ class Login extends Component {
 
 render() {
     return (
-        <div>
-            <div>
-                <label >Email</label>
-                    <input type="email" id="email" onChange={this.onChange} name="email" value={this.state.usuario.email}/>
-                <label >Contraseña</label>
-                    <input type="password" id="password" onChange={this.onChange} name="password" value={this.state.usuario.password}/>
+        <div className="h-login">
+            <div className="h-login__one">
+                <div className="h-login__card">
+                    <div className="h-login__card--image"><img src="http://imedly.com/res/img/logo.png" /></div>
+                    <div className="h-login__card--title">
+                        <h2>Sé el médico que siempre soñaste ser</h2>
+				    </div>
+                    <div className="h-login__card--body">
+                        <div className="h-input">
+                            <input type="email" id="email" onChange={this.onChange} name="email" value={this.state.usuario.email} placeholder="Correo electrónico" />
+                        </div>
+                        <div className="h-input">
+                            <input type="password" id="password" onChange={this.onChange} name="password" value={this.state.usuario.password} placeholder="Contrase&ntilde;a" />
+                        </div>
+                    </div>
+                    <div className="h-login__card--actions">
+					    <button className="h-button h-button--raised" type="submit" onClick={this.login} >Ingresar</button>
+				    </div>
+                </div>
             </div>
-            <button type="submit" onClick={this.login}>iniciar Sesión</button>
-        </div>
+            <div className="h-login__second">
+			<div className="h-login__image">
+				<img src="http://imedly.com/res/img/girl-medic.svg" />
+				<h2>Con iMedly tendrás una plataforma que te guiará durante todo tu trayecto estudiantil.</h2>
+			</div>
+		</div>
+	    </div>
     )
 }
 }
 
 
-export default compose(consumerFirebase)(Login); 
+export default compose(consumerFirebase)(Login);
