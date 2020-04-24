@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-import Course1 from "../ui/curso1.png";
-import Preview from "../ui/preview.png";
-import Siderbar from "./siderbar";
+import Course1 from "../../ui/curso1.png";
+import Preview from "../../ui/preview.png";
+import Siderbar from "./../layout/bar/siderbar";
 
 function CoursePage(props){
 

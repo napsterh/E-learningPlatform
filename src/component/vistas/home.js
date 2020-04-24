@@ -1,11 +1,12 @@
 import React, { useEffect, useState} from "react";
 
-import Course1 from "../ui/curso1.png";
-import Cardiograma from "../ui/cardiograma.jpg";
+import Course1 from "../../ui/curso1.png";
+import Cardiograma from "../../ui/cardiograma.jpg";
 
 import { NavLink } from 'react-router-dom';
-import  Rightbar  from './rightbar';
-import Siderbar from "./siderbar";
+import  Rightbar  from './../layout/bar/rightbar';
+import Siderbar from "./../layout/bar/siderbar";
+
 
 function HomePage(){
 
@@ -153,39 +154,41 @@ function HomePage(){
     return (
 
         <React.Fragment>
+            <div className="root">
             <div className="App flex">
-            <Siderbar/>
-            </div>
-            <div className="home-page rel">
-                {/****  PROFESORES EN VIVO  ****/}
-                <div className="section rel">
-                    <h2 className="title s24 fontb">Streaming <span className="fontn">
-                    Ahora</span></h2>
-                    <div className="tutors rel flex">
-                        {tutorList}
-                    </div>
+                <Siderbar/>
                 </div>
+                <div className="home-page rel">
+                    {/****  PROFESORES EN VIVO  ****/}
+                    <div className="section rel">
+                        <h2 className="title s24 fontb">Streaming <span className="fontn">
+                        Ahora</span></h2>
+                        <div className="tutors rel flex">
+                            {tutorList}
+                        </div>
+                    </div>
 
-                {/****  BANNER CURSOS POPULARES  ****/}
-                <div className="section section-b rel">
-                    <h2 className="title s24 fontb">Popular <span className="fontn">
-                    Esta semana</span></h2>
-                    <div className="courses rel flex">
-                        {courseList}
+                    {/****  BANNER CURSOS POPULARES  ****/}
+                    <div className="section section-b rel">
+                        <h2 className="title s24 fontb">Popular <span className="fontn">
+                        Esta semana</span></h2>
+                        <div className="courses rel flex">
+                            {courseList}
+                        </div>
                     </div>
-                </div>
 
-                {/****  TOP PROFESORES  ****/}
-                <div className="section section-b rel">
-                    <h2 className="title s24 fontb">Top <span className="fontn">
-                    profesores</span></h2>
-                    <div className="top-tutors rel flex">
-                        {topTutorsList}
+                    {/****  TOP PROFESORES  ****/}
+                    <div className="section section-b rel">
+                        <h2 className="title s24 fontb">Top <span className="fontn">
+                        profesores</span></h2>
+                        <div className="top-tutors rel flex">
+                            {topTutorsList}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="right rel">
-                <Rightbar/>
+                <div className="right rel">
+                    <Rightbar/>
+                </div>
             </div>
         </React.Fragment>
     )

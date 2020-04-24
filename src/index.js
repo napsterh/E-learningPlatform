@@ -1,27 +1,29 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Fire from './firebase-config';
-import { FirebaseAppProvider } from 'reactfire';
+import Firebase, { FirebaseContext } from './server';
 
-ReactDOM.render((
-  <FirebaseAppProvider firebaseConfig = {Fire}>
-    <Suspense fallback={'Conectando la app...'}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </Suspense>
-  </FirebaseAppProvider>
-  ),document.getElementById('root'));
+import { initialState } from './session/initialState';
+import { StateProvider } from './session/store';
+import { mainReducer } from './session/reducers';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <FirebaseContext.Provider value={new Firebase()}>
+      <StateProvider initialState={initialState} reducer={mainReducer}>
+          <App />
+      </StateProvider>
+    </FirebaseContext.Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
 serviceWorker.unregister();
-
-
 /* Para cargar un servicio web como firebase
 colocar suspense y enviar un props de spinner por ejemplo para
 esperar la carga y despues renderizar, tambien se puyede colocar
