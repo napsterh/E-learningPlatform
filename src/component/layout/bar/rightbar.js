@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import Trauma from "../ui/traumatologia.jpg";
-import Cardiologia from "../ui/cardiologia.jpg";
-import Course2 from "../ui/curso2.png";
+import Trauma from "../../../ui/traumatologia.jpg";
+import Cardiologia from "../../../ui/cardiologia.jpg";
+import Course2 from "../../../ui/curso2.png";
 
-import Cake from "../ui/cake.png";
+import Cake from "../../../ui/cake.png";
 
 function Rightbar(){
 

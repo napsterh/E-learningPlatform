@@ -1,46 +1,52 @@
-import React, { Fragment } from 'react';
-//import logo from './logo.svg';
-///import './css/uifont.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React, { Component, useEffect } from 'react';
+import './App.css';
+import HomePage from "./component/vistas/home";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import RegistrarUser from './component/seguridad/RegistrarUsers';
+import Login from './component/seguridad/Login';
+import { FirebaseContext } from './server';
+
+
+import { useStateValue } from './session/store';
+
+import RutaAutenticada from './component/seguridad/RutaAutenticada';
+
 import './css/props.css';
 import './css/App.css';
-import { useFirebaseApp } from 'reactfire';
-import Auth from './Auth';
-import { useUser } from 'reactfire';
-
-//screen
-import Header from "./screens/header";
-import Siderbar from "./screens/siderbar";
-import HomePage from "./screens/home";
-import Rightbar from "./screens/rightbar";
-
-import CoursePage from "./screens/course";
-import DiscoverPage from "./screens/discover";
-import CategoriesPage from "./screens/categories";
-import MyCoursesPage from "./screens/mycourses";
-
-import { Route, NavLink, HashRouter } from 'react-router-dom';
 
 
-// <Rightbar/>
-function App() {
 
-  /*const firebase = useFirebaseApp();
-  const user = useUser();*/
 
-  return (
-    <div className="App flex">
-      <HashRouter>
-        <div className="app-content">
-          <Route path="/" component={CoursePage} />
-          <Route path="/course/:courseid" component={CoursePage}/>
-          <Route path="/descubrir" component={DiscoverPage}/>
-          <Route path="/categoria" component={CategoriesPage}/>
-          <Route path="/mis-cursos" component={MyCoursesPage}/>
-        </div>
-      </HashRouter>
-    </div>
-  );
+
+function App(props) {
+
+  let firebase = React.useContext(FirebaseContext);
+
+  const [autenticacionIniciada, setupFirebaseInicial] = React.useState(false);
+
+  const [{ openSnackbar }, dispatch] = useStateValue();
+
+  useEffect(() => {
+    firebase.estaIniciado().then(val => {
+      setupFirebaseInicial(val);
+    })
+  })
+
+
+  return autenticacionIniciada !== false ?(
+    <React.Fragment>
+      <BrowserRouter>
+            <Switch>
+              <RutaAutenticada exact path="/" autenticadoFirebase={firebase.auth.currentUser} component={HomePage} />
+              <Route path="/auth/login" exact component={Login} />
+              <Route path="/auth/RegistrarUser" exact component={RegistrarUser} />
+            </Switch>
+
+      </BrowserRouter>
+    </React.Fragment>
+  )
+  : null
+    ;
 }
 
 export default App;

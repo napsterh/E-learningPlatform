@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import logo from '../ui/logo.png';
+import logo from '../../../ui/logo.png';
 
 import { NavLink } from 'react-router-dom';
-import Auth from '../Auth';
 
 function Siderbar(){
 

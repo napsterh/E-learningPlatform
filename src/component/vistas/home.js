@@ -1,11 +1,12 @@
 import React, { useEffect, useState} from "react";
 
-import Course1 from "../ui/curso1.png";
-import Cardiograma from "../ui/cardiograma.jpg";
+import Course1 from "../../ui/curso1.png";
+import Cardiograma from "../../ui/cardiograma.jpg";
 
 import { NavLink } from 'react-router-dom';
-import  Rightbar  from './rightbar';
-import Siderbar from "./siderbar";
+import  Rightbar  from './../layout/bar/rightbar';
+import Siderbar from "./../layout/bar/siderbar";
+
 
 function HomePage(){
 
